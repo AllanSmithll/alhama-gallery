@@ -4,5 +4,5 @@
 - Imagens de países ao redor do globo;
 - Cada imagem vai ser associada a um país, em certo continente;
 - Será usado o React como framework.
-
+<br>
 <strong>Projeto final da disciplina de Linguagens de Script</strong>

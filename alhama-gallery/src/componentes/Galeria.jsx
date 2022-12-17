@@ -1,10 +1,10 @@
 function Galeria() {
-    return (
-        <div className="container gallery-main">
-            <div className="container gallery-photos">
+    return <div className="container gallery-main">
+            <div className="container gallery-photos"> 
+            
             </div>
-        </div>
-    );
+        </div>;
+    
 }
 
-export default Galeria();
+export default Galeria;

@@ -1,9 +1,18 @@
 import './App.css';
-import './componentes/Galeria.jsx'
-
+import Galeria from './componentes/Galeria.jsx';
+import Cabecalho from './componentes/Cabecalho';
 function App() {
   return (
+    <div>
+    <header>
+      <Cabecalho />
+    </header>
+    <main>
     <Galeria />
+    </main>
+    </div>
+    
+    
   );
 }
 

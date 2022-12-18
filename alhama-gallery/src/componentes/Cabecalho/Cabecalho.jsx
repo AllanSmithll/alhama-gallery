@@ -1,17 +1,17 @@
 import './Cabecalho.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle';
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Cabecalho(){
     return (
         <header className="position-relative">
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg" color="primary" dark expand="md">
 
             <div className="container-fluid">
                 <div className="container position-absolute translate-middle" id="Logo">
-                    <img className='img-fluid' src="public/Logo.png" />
+                    <img className='img-fluid' src={"public/Logo.png"} />
                     <h1 className="navbar-brand fs-5" id='TitleHeader'>ALHAMA</h1>
                 </div>
 
@@ -27,7 +27,7 @@ function Cabecalho(){
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <FontAwesomeIcon icon={faUser} />
+                                {/* <FontAwesomeIcon icon={faUser} /> */}
                             </a>
                             <ul className="dropdown-menu">
                                 <li><a className="dropdown-item" href="#"> Fazer Login </a></li>

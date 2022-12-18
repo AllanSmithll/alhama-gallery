@@ -1,7 +1,7 @@
 function Cabecalho(){
     return <div> 
         <div id="container">
-            <div> Cabecalho!!</div>
+            <h1> Cabecalho</h1>
         </div>
     </div>;
 }

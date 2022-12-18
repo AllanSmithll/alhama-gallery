@@ -2,6 +2,7 @@ import './Cabecalho.css';
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import teste from './Logo.png'
+import CaixaPesquisa from '../CaixaPesquisa/CaixaPesquisa';
 function Cabecalho(){
     return (
         <header className="position-relative">
@@ -12,7 +13,9 @@ function Cabecalho(){
                 <img id='logo' src={teste} alt='logo' style={{width: '100px', height: '100px'}}/>
                     <h1 className="navbar-brand fs-5" id='TitleHeader'>ALHAMA</h1>
                 </div>
-
+                <div>
+                    <CaixaPesquisa />
+                </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

@@ -1,19 +1,19 @@
 import './App.css';
 import Galeria from './componentes/Galeria.jsx';
-import Cabecalho from './componentes/Cabecalho';
+import Cabecalho from './componentes/Cabecalho/Cabecalho';
+import CaixaPesquisa from './componentes/CaixaPesquisa/CaixaPesquisa' 
+
 function App() {
   return (
-    <div>
-    <header>
+    <>
       <Cabecalho />
-    </header>
     <main>
-    <Galeria />
+      <CaixaPesquisa />
+      <Galeria />
     </main>
-    </div>
+    </>
     
     
   );
 }
-
 export default App;

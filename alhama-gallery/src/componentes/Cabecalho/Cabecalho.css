@@ -1,0 +1,28 @@
+header{
+    cursor: default;
+    padding: 30px;
+    background-color: azure;
+}
+
+#Logo{
+    width: 150px;
+    height: 150px;
+    top:50%; 
+    left:3%;
+    display: flex;
+    align-items: center;
+}
+
+#Title, .titulo{
+    font-weight: bolder;
+    text-align: justify;
+
+}
+.Navegacao{
+    justify-content:end;
+}
+#TitleHeader{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font: bolder;
+    color:rgb(81, 155, 219);
+}

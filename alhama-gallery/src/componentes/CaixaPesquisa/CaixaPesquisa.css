@@ -1,0 +1,29 @@
+
+:root{
+    --TituloCaixaResultado:rgb(88, 100, 112);
+    --shadowBox: rgba(5, 88, 116, 0.5);
+    --ResultadosSecao: rgba(250, 250, 250, 0.5);
+    --correspondenciaBorder: rgba(250, 250, 250, 0.5);
+    --textoNormalColor: rgb(98, 139, 253);
+    --autorColor: rgb(48, 80, 168);
+    --correspondenciaBackground: rgb(67, 67, 145);
+}
+
+.caixa-pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    width: 80%; 
+    width: 80%; 
+    height:50vh;
+    background:rgb(204, 204, 255);
+    text-indent: initial;
+
+}
+.caixa-pesquisa:hover{
+    box-shadow: 0 0 2px 1px var(--shadowBox);
+
+}

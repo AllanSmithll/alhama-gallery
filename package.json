@@ -1,0 +1,27 @@
+{
+  "name": "alhamagallery",
+  "version": "1.0.0",
+  "description": "<h1>Alhama Gallery</h1> <p>Site criado para servir como galeria de paisagens do mundo todo. Monumentos, lugares históricos, pontos turísticos em um só lugar, ao vivo e a cores.</p> <h2>Características Principais</h2> <li>Imagens de países ao redor do globo;</li> <li>Cada imagem vai ser associada a um país, em certo continente;</li> <li>Será usado o React como framework.</li> <br> <strong>Projeto final da disciplina de Linguagens de Script, IFPB - Campus João Pessoa</strong>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanSmithll/Alhama_Gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllanSmithll/Alhama_Gallery/issues"
+  },
+  "homepage": "https://github.com/AllanSmithll/Alhama_Gallery#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.1.0"
+  }
+}

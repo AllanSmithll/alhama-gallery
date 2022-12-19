@@ -1,26 +1,25 @@
 import './App.css';
-import Galeria from './componentes/Galeria.jsx';
+import Galeria from './componentes/Galeria/Galeria';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
-import CaixaPesquisa from './componentes/CaixaPesquisa/CaixaPesquisa' 
 import Rodape from './componentes/Rodape';
+
 // import teste from './Logo.png'
+
+
+
+
 function App() {
   return (
     <>
       <Cabecalho />
     <main>
-      <CaixaPesquisa />
-      <Galeria />
-      <div>
-        {/* <img src={teste} alt='logo'/> */}
-      </div>
+      <Galeria> </Galeria>
+      
       <footer id='footer' >
         <Rodape />
       </footer>
     </main>
     </>
-    
-    
   );
 }
 export default App;

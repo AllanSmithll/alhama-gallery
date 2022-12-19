@@ -2,23 +2,28 @@ import './CaixaPesquisa.css';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function caixaPesquisa(){
-    return(
-    <div>      
-        <form id="pesquisaForm" onsubmit="handleEvent(event)">
-    
-            <div className='container' id="Pesquisar">
-            
-            <button type="submit" id='Enviar' onclick="search_books()" >                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-                        
-            <input id='BuscaInput' type="text" autocomplete="off" size="50%" placeholder="Brasil/Rio de Janeiro/Cristo Redentor" />
 
+function handleSubmit(event){
+    event.preventDefault()
+}
+
+function CaixaPesquisa(){
+    return(
+ 
+        <form id="pesquisaForm" onSubmit={(event)=> handleSubmit(event)} dark="true">
+            <div className='divBusca' id="Pesquisar">
+            <input type="text" id="txtBusca" placeholder="País/Monumentos/Cidades" />
+            <button type='submit' id='Busca'>
+            <FontAwesomeIcon icon={faMagnifyingGlass}/>
+            </button>
             </div>
 
         </form> 
-    </div>
-    )
+    );
 
-}
-export default caixaPesquisa;
+};
+
+
+
+
+export default CaixaPesquisa;

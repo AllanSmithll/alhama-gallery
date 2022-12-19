@@ -3,24 +3,31 @@ import { useEffect, useState, useRef } from 'react';
 import './Galeria.css'
 
 function Galeria() {
-    const [data, setData] = useState([]);
+  
+  const [data, setData] = useState([]);
+  
   useEffect(() => {
     fetch('http://localhost:3000/static/images.json')
       .then((response) => response.json())
-      .then(setData);
+      .then(setData)
+      .catch(error=>{console.error(error)})
   }, []);
-    return (
-    <div id='gallery-main'>
-         
-            <ImageBox linkImage='#'title='oi' />
-            <ImageBox linkImage='#'title='oi' />
-            <ImageBox linkImage='#'title='oi' />
-            <ImageBox linkImage='#'title='oi' />
-            <ImageBox linkImage='#'title='oi' />
-            <ImageBox linkImage='#'title='oi' />
 
+  return (
+    <div id='gallery-main'>
+      {createImagesBox(setData.map((Monumento)=>createImagesBox(Monumento)))}
     </div>
     )
+};
+
+
+function createImagesBox(Monumento){
+  galery=document.getElementById('gallery-main');
+  galery.insertAdjacentHTML(createImageBox(Monumento.id, Monumento.nome, Monumento.cidade, Monumento.pais, Monumento.continente,Monumento.imagem))
+};
+
+function createImageBox(id,linkImage, title,city,country,continent){
+  return <ImageBox id={id} linkImage={ linkImage } title={ title } city={ city }country={ country }continent={continent} /> 
 }
 
-export default Galeria;
+export default Galeria

@@ -6,7 +6,7 @@
             "cidade": "Londres",
             "pais": "Inglaterra",
             "continente": "Europa",
-            "imagem": "./bigBen-Inglaterra.jpg"
+            "imagem": "bigBen-Inglaterra.jpg"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "cidade": "Roma",
             "pais": "Itália",
             "continente": "Europa",
-            "imagem": "./coliseu-Italia.jpg"
+            "imagem": "coliseu-Italia.jpg"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "cidade": "Rio de Janeiro",
             "pais": "Brasil",
             "continente": "América do Sul",
-            "imagem": "./cristoRedentor-Brasil.jpg"
+            "imagem": "cristoRedentor-Brasil.jpg"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "cidade": "Nova Iorque",
             "pais": "Estados Unidos da América",
             "continente": "América do Norte",
-            "imagem": "./estatuaDaLiberdade-EUA.jpg"
+            "imagem": "estatuaDaLiberdade-EUA.jpg"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "cidade": "Atenas",
             "pais": "Grécia",
             "continente": "Europa",
-            "imagem": "./partenon-Grecia.jpg"
+            "imagem": "partenon-Grecia.jpg"
         },
         
         {
@@ -47,15 +47,23 @@
             "cidade": "Pisa",
             "pais": "Itália",
             "continente": "Europa",
-            "imagem": "./torreDePisa.jpg"
+            "imagem": "torreDePisa.jpg"
         },
         {
             "id": 7,
-            "nome": "Torre de Pisa",
-            "cidade": "Pisa",
-            "pais": "Itália",
+            "nome": "Torre Eiffel",
+            "cidade": "Paris",
+            "pais": "França",
             "continente": "Europa",
-            "imagem": "./torreDePisa.jpg"
+            "imagem": "torreDePisa.jpg"
+        },
+        {
+            "id": 8,
+            "nome": "Torre de David",
+            "cidade": "Caracas",
+            "pais": "Venezuela",
+            "continente": "América do Sul",
+            "imagem": "torreDavid-venezuela.jpeg"
         }
     ]
  }

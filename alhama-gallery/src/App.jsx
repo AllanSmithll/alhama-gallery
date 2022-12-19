@@ -14,10 +14,10 @@ function App() {
       <div>
         {/* <img src={teste} alt='logo'/> */}
       </div>
+    </main>
       <footer id='footer' >
         <Rodape />
       </footer>
-    </main>
     </>
     
     

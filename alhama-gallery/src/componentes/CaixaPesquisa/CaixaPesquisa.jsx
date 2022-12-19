@@ -9,7 +9,7 @@ function caixaPesquisa(){
     
             <div className='container' id="Pesquisar">
             
-            <button type="submit" id='Enviar' onclick="search_books()">                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <button type="submit" id='Enviar' onclick="search_books()" >                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
                         
             <input id='BuscaInput' type="text" autocomplete="off" size="50%" placeholder="Brasil/Rio de Janeiro/Cristo Redentor" />

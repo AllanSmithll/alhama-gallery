@@ -4,9 +4,6 @@ import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape';
 
 
-
-
-
 function App() {
   return (
     <>

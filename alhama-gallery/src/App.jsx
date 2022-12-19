@@ -3,7 +3,6 @@ import Galeria from './componentes/Galeria/Galeria';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape';
 
-// import teste from './Logo.png'
 
 
 
@@ -13,8 +12,7 @@ function App() {
     <>
       <Cabecalho />
     <main>
-      <Galeria> </Galeria>
-      
+      <Galeria />
       <footer id='footer' >
         <Rodape />
       </footer>

@@ -22,12 +22,12 @@ function Galeria() {
 
 
 function createImagesBox(Monumento){
-  galery=document.getElementById('gallery-main');
-  galery.insertAdjacentHTML(createImageBox(Monumento.id, Monumento.nome, Monumento.cidade, Monumento.pais, Monumento.continente,Monumento.imagem))
+  const galery=document.getElementById('gallery-main');
+  return (galery.insertAdjacentHTML(createImageBox(Monumento.id, Monumento.nome, Monumento.cidade, Monumento.pais, Monumento.continente,Monumento.imagem)))
 };
 
 function createImageBox(id,linkImage, title,city,country,continent){
-  return <ImageBox id={id} linkImage={ linkImage } title={ title } city={ city }country={ country }continent={continent} /> 
+  return (<ImageBox id={id} linkImage={ linkImage } title={ title } city={ city }country={ country }continent={continent} /> )
 }
 
-export default Galeria
+export default {Galeria,createImageBox,createImagesBox};

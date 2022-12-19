@@ -1,29 +1,28 @@
-
-:root{
-    --TituloCaixaResultado:rgb(88, 100, 112);
-    --shadowBox: rgba(5, 88, 116, 0.5);
-    --ResultadosSecao: rgba(250, 250, 250, 0.5);
-    --correspondenciaBorder: rgba(250, 250, 250, 0.5);
-    --textoNormalColor: rgb(98, 139, 253);
-    --autorColor: rgb(48, 80, 168);
-    --correspondenciaBackground: rgb(67, 67, 145);
-}
-
-.caixa-pesquisa{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: fit-content;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-    width: 80%; 
-    width: 80%; 
-    height:50vh;
-    background:rgb(204, 204, 255);
-    text-indent: initial;
-
-}
-.caixa-pesquisa:hover{
-    box-shadow: 0 0 2px 1px var(--shadowBox);
-
-}
+#divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #f1f1f1;
+    border-radius:10px;
+    width:100%;
+    height:100%;
+    margin-right: 10px;
+  }
+  
+#Busca{
+    border:none;
+    height:33px;
+    border-radius: 0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#5f8285;
+    color:rgb(241, 241, 241)
+  }
+  
+  #txtBusca{
+    background-color:rgb(190, 235, 236);
+    padding-left:5px;
+    font-style:italic;
+    font-size:1rem;
+    border:solid #5f8285 2px; 
+    height:33px;
+    width:300px; 
+  }

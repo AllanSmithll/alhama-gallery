@@ -22,16 +22,10 @@ function Example() {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Cadastramento</Modal.Title>
+            <Modal.Title>Cadastro :) </Modal.Title>
           </Modal.Header>
           <Modal.Body> <Input/> </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Cancelar
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Enviar
-            </Button>
           </Modal.Footer>
         </Modal>
       </>
@@ -72,7 +66,7 @@ function Cabecalho() {
                                     <FontAwesomeIcon icon={faUser} />
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#"> Fazer Login </a></li>
+                                     <Button variant="secondary" >Login</Button>
                                     <li>
                                         <Example /> 
                                     </li>

@@ -6,7 +6,7 @@
             "cidade": "Londres",
             "pais": "Inglaterra",
             "continente": "Europa",
-            "imagem": "bigBen-Inglaterra.jpg"
+            "imagem": "bigBenInglaterra.jpg"
         },
         {
             "id": 2,
@@ -47,15 +47,7 @@
             "cidade": "Pisa",
             "pais": "Itália",
             "continente": "Europa",
-            "imagem": "torreDePisa.jpg"
-        },
-        {
-            "id": 7,
-            "nome": "Torre Eiffel",
-            "cidade": "Paris",
-            "pais": "França",
-            "continente": "Europa",
-            "imagem": "torreDePisa.jpg"
+            "imagem": "torreDePisa-Italia.jpg"
         },
         {
             "id": 8,
@@ -64,6 +56,14 @@
             "pais": "Venezuela",
             "continente": "América do Sul",
             "imagem": "torreDavid-venezuela.jpeg"
+        },
+        {
+            "id": 9,
+            "nome": "Torre Eiffel",
+            "cidade": "Paris",
+            "pais": "França",
+            "continente": "Europa",
+            "imagem": "torreEiffel-Paris.png"
         }
     ]
  }

@@ -6,7 +6,7 @@ function Galeria() {
   
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3000/images')
+    fetch('http://localhost:3000/static/images')
       .then((response) => response.json())
       .then((dado)=>setData(dado))
       .catch(error=>{console.error(error)})

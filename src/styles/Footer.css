@@ -1,0 +1,22 @@
+.footer-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  #footer {
+    padding: 10px;
+  }
+  
+  #footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  li {
+    list-style: none;
+  }

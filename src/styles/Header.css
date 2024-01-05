@@ -1,0 +1,67 @@
+.bg-body-tertiary {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-container {
+    background-color: black;
+}
+
+.header-container a {
+    text-decoration: none;
+}
+
+.header-container .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-container .navbar-brand:hover {
+    color: #002;
+}
+
+.app-name {
+    text-decoration: none;
+}
+
+.nav-item {
+    color: #525253;
+    margin-left: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0rem;
+}
+
+.nav-item:active {
+    color: #002;
+}
+
+.icon-plus {
+    font-size: 1.5rem;
+    color: #000;
+    background-color: rgb(197, 222, 246);
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #f8f9fa !important;
+    border: #f8f9fa !important;
+    border-radius: 50%;
+}
+
+.btn-primary:hover {
+    background-color: #eef !important;
+    border: #eef !important;
+}
+
+.btn-primary:active {
+    background-color: aliceblue !important;
+    border: aliceblue !important;
+    border-radius: 50%;
+}

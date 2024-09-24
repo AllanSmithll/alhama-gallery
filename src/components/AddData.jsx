@@ -11,8 +11,7 @@ const AddData = () => {
     e.preventDefault();
     
     try {
-      // Adiciona um documento à coleção "paisagens"
-      const docRef = await addDoc(collection(db, "paisagens"), {
+      const docRef = await addDoc(collection(db, "landscapes"), {
         nome: nome,
         pais: pais,
       });

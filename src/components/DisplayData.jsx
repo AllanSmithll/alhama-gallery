@@ -4,37 +4,37 @@ import { collection, getDocs, doc, updateDoc, deleteDoc } from "firebase/firesto
 import { db } from "../firestore.config";
 
 const DisplayData = () => {
-  const [paisagens, setPaisagens] = useState([]);
+  const [landscapes, setlandscapes] = useState([]);
   const [novoNome, setNovoNome] = useState("");
   const [editandoId, setEditandoId] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "paisagens"));
+      const querySnapshot = await getDocs(collection(db, "landscapes"));
       const data = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setPaisagens(data);
+      setlandscapes(data);
     };
 
     fetchData();
   }, []);
 
   const handleUpdate = async (id) => {
-    const paisagemRef = doc(db, "paisagens", id);
+    const paisagemRef = doc(db, "landscapes", id);
     await updateDoc(paisagemRef, { nome: novoNome });
     setEditandoId(null);
   };
 
   const handleDelete = async (id) => {
-    const paisagemRef = doc(db, "paisagens", id);
+    const paisagemRef = doc(db, "landscapes", id);
     await deleteDoc(paisagemRef);
-    setPaisagens(paisagens.filter((paisagem) => paisagem.id !== id));
+    setlandscapes(landscapes.filter((paisagem) => paisagem.id !== id));
   };
 
   return (
     <div>
       <h2>Paisagens do Firestore</h2>
       <ul>
-        {paisagens.map((paisagem) => (
+        {landscapes.map((paisagem) => (
           <li key={paisagem.id}>
             {editandoId === paisagem.id ? (
               <div>

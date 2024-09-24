@@ -1,13 +1,11 @@
-import React from "react";
-import AddData from "./components/AddData";
-import DisplayData from "./components/DisplayData";
+import RoutesApp from "./routes";
+
+import "./styles/App.css";
 
 function App() {
   return (
-    <div>
-      <h1>Galeria de Paisagens</h1>
-      <AddData />
-      <DisplayData />
+    <div className="App">
+      <RoutesApp />
     </div>
   );
 }

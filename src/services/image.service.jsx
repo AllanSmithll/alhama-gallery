@@ -1,11 +1,11 @@
 class ImageService {
-  API_URL = "http://localhost:3001/photos";
+  API_URL = "http://localhost:3001/landscapes";
 
   async list() {
     try {
       const response = await fetch(this.API_URL);
-      const photos = await response.json();
-      return photos;
+      const landscapes = await response.json();
+      return landscapes;
     } catch (error) {
       throw error;
     }
@@ -14,9 +14,9 @@ class ImageService {
   async listBraziliansImages() {
     try {
       const response = await fetch(this.API_URL);
-      const photos = await response.json();
-      const brazilianPhotos = photos.filter(photo => photo.country === "Brasil");
-      return brazilianPhotos;
+      const landscapes = await response.json();
+      const brazilianlandscapes = landscapes.filter(photo => photo.country === "Brasil");
+      return brazilianlandscapes;
     } catch (error) {
       throw error;
     }

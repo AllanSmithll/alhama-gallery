@@ -1,11 +1,13 @@
-import RoutesApp from "./routes";
-
-import "./styles/App.css";
+import React from "react";
+import AddData from "./components/AddData";
+import DisplayData from "./components/DisplayData";
 
 function App() {
   return (
-    <div className="App">
-      <RoutesApp />
+    <div>
+      <h1>Galeria de Paisagens</h1>
+      <AddData />
+      <DisplayData />
     </div>
   );
 }

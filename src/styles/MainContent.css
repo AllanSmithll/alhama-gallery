@@ -19,6 +19,7 @@
 .card {
   margin: 30px;
   max-width: 300px;
+  min-width: 250px; 
   width: auto;
   flex: 0 0 33.33%;
 }
@@ -30,12 +31,19 @@
 }
 
 .card-body {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
 .card-text {
+  word-wrap: break-word;
   margin-top: 0;
   margin-bottom: 0px;
 }

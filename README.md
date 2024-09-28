@@ -2,6 +2,8 @@
 
 Bem-vindo ao **Alhama Gallery**, uma plataforma online dedicada a exibir uma galeria global de paisagens icônicas e pontos turísticos de diversos países. Explore monumentos, lugares históricos e belezas naturais de todo o mundo, com um foco especial em locais turísticos brasileiros.
 
+![Preview Alhama Gallery](src/assets/alhama-gallery-preview.png)
+
 ## 🌍 Funcionalidades Principais
 
 ### 🔥 Galeria de Imagens Global

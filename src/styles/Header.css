@@ -1,4 +1,5 @@
 .bg-body-tertiary {
+    background-color: #fff !important;
     display: flex;
     position: fixed;
     top: 0;
@@ -38,6 +39,14 @@
 
 .nav-item:active {
     color: #002;
+    font-weight: bold; /* Para destacar ainda mais */
+    border-bottom: 2px solid #002; 
+}
+
+.nav-link.active {
+    color: #002 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #002;
 }
 
 .icon-plus {

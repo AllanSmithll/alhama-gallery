@@ -1,4 +1,4 @@
-export interface Photo {
+export interface Landscapes {
     id?: number;
     url: string;
     title: string;

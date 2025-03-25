@@ -5,7 +5,6 @@ import {
   getDocs,
   query,
   orderBy,
-  where,
   limit,
   startAfter
 } from "firebase/firestore";
@@ -24,23 +23,22 @@ const PaginationComponent = ({ collectionName, filter }) => {
   const fetchItems = useCallback(async (cursor = null) => {
     setLoading(true);
   
-    let q = query(
-      collection(db, collectionName),
-      orderBy("title")
-    );
+    let q = collection(db, collectionName);
   
-    if (filter) {
-      q = query(q, where(filter.field, "==", filter.value));
-    }
+    q = query(q, orderBy("title"));
   
     if (cursor) {
       q = query(q, startAfter(cursor));
     }
   
-    q = query(q, limit(PAGE_SIZE)); // O limit sempre no final
+    q = query(q, limit(PAGE_SIZE));
   
     const querySnapshot = await getDocs(q);
-    const fetchedItems = querySnapshot.docs.map(doc => doc.data());
+    let fetchedItems = querySnapshot.docs.map(doc => doc.data());
+
+    if (filter) {
+      fetchedItems = fetchedItems.filter(item => item[filter.field] === filter.value);
+    }
   
     setIsFirstPage(cursor === null);
     setHasMore(querySnapshot.docs.length === PAGE_SIZE);

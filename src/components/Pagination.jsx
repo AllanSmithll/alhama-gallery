@@ -6,7 +6,8 @@ import {
   query,
   orderBy,
   limit,
-  startAfter
+  startAfter,
+  where
 } from "firebase/firestore";
 import { db } from "../firestore.config";
 import "../styles/MainContent.css";
@@ -25,7 +26,11 @@ const PaginationComponent = ({ collectionName, filter }) => {
   
     let q = collection(db, collectionName);
   
-    q = query(q, orderBy("title"));
+    if (filter) {
+      q = query(q, where(filter.field, "==", filter.value), orderBy("title"));
+    } else {
+        q = query(q, orderBy("title"));
+    }
   
     if (cursor) {
       q = query(q, startAfter(cursor));
@@ -34,21 +39,17 @@ const PaginationComponent = ({ collectionName, filter }) => {
     q = query(q, limit(PAGE_SIZE));
   
     const querySnapshot = await getDocs(q);
-    let fetchedItems = querySnapshot.docs.map(doc => doc.data());
-
-    if (filter) {
-      fetchedItems = fetchedItems.filter(item => item[filter.field] === filter.value);
-    }
+    const fetchedItems = querySnapshot.docs.map(doc => doc.data());
   
     setIsFirstPage(cursor === null);
-    setHasMore(querySnapshot.docs.length === PAGE_SIZE);
+    setHasMore(fetchedItems.length === PAGE_SIZE);
     setItems(fetchedItems);
   
     setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1] || null);
   
     setLoading(false);
   }, [collectionName, filter]);
-  
+
   useEffect(() => {
     fetchItems();
   }, [fetchItems]);

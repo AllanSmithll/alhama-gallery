@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Card, Button } from "react-bootstrap";
-import { collection, getDocs, query, where, orderBy, startAfter, limit } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  where,
+  limit,
+  startAfter
+} from "firebase/firestore";
 import { db } from "../firestore.config";
 import "../styles/MainContent.css";
 
@@ -9,38 +17,40 @@ const PAGE_SIZE = 9;
 const PaginationComponent = ({ collectionName, filter }) => {
   const [items, setItems] = useState([]);
   const [lastDoc, setLastDoc] = useState(null);
-  const [firstDoc, setFirstDoc] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isFirstPage, setIsFirstPage] = useState(true);
+  const [hasMore, setHasMore] = useState(true);
 
-  const fetchItems = useCallback(async (cursor = null, direction = "next") => {
+  const fetchItems = useCallback(async (cursor = null) => {
     setLoading(true);
-
+  
     let q = query(
       collection(db, collectionName),
-      orderBy("title"),
-      limit(PAGE_SIZE)
+      orderBy("title")
     );
-
+  
     if (filter) {
       q = query(q, where(filter.field, "==", filter.value));
     }
-
+  
     if (cursor) {
-      q = direction === "next" ? query(q, startAfter(cursor)) : q;
+      q = query(q, startAfter(cursor));
     }
-
+  
+    q = query(q, limit(PAGE_SIZE)); // O limit sempre no final
+  
     const querySnapshot = await getDocs(q);
     const fetchedItems = querySnapshot.docs.map(doc => doc.data());
-
-    if (querySnapshot.docs.length > 0) {
-      setFirstDoc(querySnapshot.docs[0]);
-      setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1]);
-    }
-
+  
+    setIsFirstPage(cursor === null);
+    setHasMore(querySnapshot.docs.length === PAGE_SIZE);
     setItems(fetchedItems);
+  
+    setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1] || null);
+  
     setLoading(false);
   }, [collectionName, filter]);
-
+  
   useEffect(() => {
     fetchItems();
   }, [fetchItems]);
@@ -69,10 +79,10 @@ const PaginationComponent = ({ collectionName, filter }) => {
         </div>
       )}
       <div className="pagination-buttons">
-        <Button onClick={() => fetchItems(firstDoc, "prev")} disabled={!firstDoc}>
+        <Button onClick={() => fetchItems()} disabled={isFirstPage}>
           Anterior
         </Button>
-        <Button onClick={() => fetchItems(lastDoc, "next")} disabled={!lastDoc}>
+        <Button onClick={() => fetchItems(lastDoc)} disabled={!hasMore}>
           Próximo
         </Button>
       </div>

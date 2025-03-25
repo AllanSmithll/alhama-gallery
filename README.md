@@ -101,9 +101,9 @@ Para mais informações, veja nosso arquivo CONTRIBUTING.md.
 
 Este projeto é mantido por:
 
-    [@AllanSmithll](https://www.github.com/AllanSmithll)
-    [@HanielCostaDaSilva](https://www.github.com/HanielCostaDaSilva)
-    [@Immarcio](https://www.github.com/Immarcio)
+- [@AllanSmithll](https://www.github.com/AllanSmithll)
+- [@HanielCostaDaSilva](https://www.github.com/HanielCostaDaSilva)
+- [@Immarcio](https://www.github.com/Immarcio)
 
 Sinta-se à vontade para entrar em contato para discussões, sugestões ou colaborações!
 

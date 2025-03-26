@@ -5,6 +5,4 @@ export interface Landscapes {
     continent: string;
     country: string;
     city: string;
-    width: number;
-    height: number;
 }

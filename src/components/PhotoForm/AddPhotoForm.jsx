@@ -12,14 +12,12 @@ const AddPhotoForm = () => {
   const [continent, setContinent] = useState("");
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
   const [message, setMessage] = useState("");
   const isEmpty = (value) => value.trim() === "";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const areInputsEmpty = isEmpty(url) || isEmpty(title) || isEmpty(continent) || isEmpty(country) || isEmpty(city) || width === 0 || height === 0;
+    const areInputsEmpty = isEmpty(url) || isEmpty(title) || isEmpty(continent) || isEmpty(country) || isEmpty(city);
 
     if (areInputsEmpty) {
       setMessage("Por favor, preencha todos os campos.");
@@ -32,17 +30,13 @@ const AddPhotoForm = () => {
         title,
         continent,
         country,
-        city,
-        width,
-        height
+        city
       });
       setUrl("");
       setTitle("");
       setContinent("");
       setCountry("");
       setCity("");
-      setWidth(0);
-      setHeight(0);
       setMessage("Imagem criada com sucesso.");
     } catch (error) {
       setMessage("Erro ao criar imagem.");
@@ -62,8 +56,6 @@ const AddPhotoForm = () => {
           <input type="text" value={continent} onChange={(e) => setContinent(e.target.value)} placeholder="Continente" />
           <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="País" />
           <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Cidade" />
-          <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} placeholder="Largura" />
-          <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} placeholder="Altura" />
           <br />
           <span className="message-form">{message}</span>
           <br />
